@@ -8,10 +8,8 @@ class User extends AppModel {
 
 	public function beforeSave($options = array()) {
          // if ID is not set, we're inserting a new user as opposed to updating
-         if (!$this->id) {
              $passwordHasher = new BlowfishPasswordHasher();
              $this->data[$this->alias]['password'] = $passwordHasher->hash($this->data[$this->alias]['password']);
-         }
          return true;
      }
 
