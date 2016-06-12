@@ -6,6 +6,10 @@ echo $this->Html->link(
     '/pages/home',
     array('class' => 'menu_button'));
 
+echo $this->Html->link(
+    'Users',
+    '/users/index',
+    array('class' => 'menu_button'));
 
 echo $this->Html->link(
     'Events',
