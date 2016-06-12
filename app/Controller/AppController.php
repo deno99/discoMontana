@@ -53,8 +53,6 @@ App::uses('Controller', 'Controller');
          )
      );
 
-     public function beforeFilter() {
-         $this->Auth->allow('index', 'view');
-     }
+    
      //...
  }
