@@ -9,5 +9,4 @@
  echo '<span class="notice success">';
 	 echo __d('cake_dev', 'welcome to disko');
  echo '</span>';
-	echo 'Events active'
  ?>

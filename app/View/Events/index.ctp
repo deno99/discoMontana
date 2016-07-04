@@ -48,5 +48,7 @@
 		<li><?php echo $this->Html->link(__('New Event'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Floors'), array('controller' => 'floors', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Floor'), array('controller' => 'floors', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

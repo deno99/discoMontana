@@ -30,6 +30,25 @@ App::uses('AppController', 'Controller');
  */
 class PagesController extends AppController {
 
+public function entries() {
+	$this->loadModel('User');
+	$this->loadModel('Event');
+	$users = $this->User->find('all');
+	$events = $this->Event->find('all');
+	// debug($users);
+	$this->set(compact('events'));
+	if (isset($this->request->query['event'])) {
+		$this->buyTicket($this->request->query['event']);
+	}
+}
+
+public function buyTicket($event) {
+$uid = $this->Auth->user('id');
+//debug($uid);
+$this->User->Event->query("insert into users_events (idUser,IdEvent) values (". $uid .",".$event.");");
+	$this->Flash->success(__('Success buying ticket.'));
+}
+
 /**
  * This controller does not use a model
  *

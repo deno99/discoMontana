@@ -8,6 +8,7 @@
 		echo $this->Form->input('start_time');
 		echo $this->Form->input('end_time');
 		echo $this->Form->input('idFloor');
+		echo $this->Form->input('User');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -20,5 +21,7 @@
 		<li><?php echo $this->Html->link(__('List Events'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Floors'), array('controller' => 'floors', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Floor'), array('controller' => 'floors', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

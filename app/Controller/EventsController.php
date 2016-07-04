@@ -23,7 +23,6 @@ class EventsController extends AppController {
 	public function index() {
 		$this->Event->recursive = 0;
 		$this->set('events', $this->Paginator->paginate());
-
 	}
 
 /**
@@ -38,9 +37,8 @@ class EventsController extends AppController {
 			throw new NotFoundException(__('Invalid event'));
 		}
 		$options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
-		$event = $this->Event->find('first', $options);
-		$this->set('event', $event);
-		}
+		$this->set('event', $this->Event->find('first', $options));
+	}
 
 /**
  * add method
@@ -57,6 +55,8 @@ class EventsController extends AppController {
 				$this->Flash->error(__('The event could not be saved. Please, try again.'));
 			}
 		}
+		$users = $this->Event->User->find('list');
+		$this->set(compact('users'));
 	}
 
 /**
@@ -81,6 +81,8 @@ class EventsController extends AppController {
 			$options = array('conditions' => array('Event.' . $this->Event->primaryKey => $id));
 			$this->request->data = $this->Event->find('first', $options);
 		}
+		$users = $this->Event->User->find('list');
+		$this->set(compact('users'));
 	}
 
 /**

@@ -20,5 +20,9 @@ echo $this->Html->link(
         'Floors',
         '/floors/index',
         array('class' => 'menu_button'));
+echo $this->Html->link(
+        'Entry sale',
+        '/pages/entries/',
+        array('class' => 'menu_button'));
 
 ?>

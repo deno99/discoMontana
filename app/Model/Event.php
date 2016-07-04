@@ -3,7 +3,6 @@ App::uses('AppModel', 'Model');
 /**
  * Event Model
  *
- * @property Floor $Floor
  */
 class Event extends AppModel {
 
@@ -21,28 +20,4 @@ class Event extends AppModel {
  */
 	public $primaryKey = 'idEvent';
 
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'name';
-
-
-	// The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasOne associations
- *
- * @var array
- */
-	public $hasOne = array(
-		'Floor' => array(
-			'className' => 'Floor',
-			'foreignKey' => 'idFloor',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
 }
