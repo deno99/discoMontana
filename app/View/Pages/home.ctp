@@ -7,6 +7,6 @@
 
 
  echo '<span class="notice success">';
-	 echo __d('cake_dev', 'welcome to disko');
+	 echo __d('cake_dev', 'welcome to night club Montana');
  echo '</span>';
  ?>
